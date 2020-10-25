@@ -14,7 +14,7 @@ class ig:
         print("     Starting to Upload on Instagram")
         
         #Customize your caption here----------------------------------------
-        content = str(title) + "\n\nPosted by: " + un + "\n\nFollow: "+str(self.username)+'for more\n\n#instagram #reddit"
+        content = str(title) + "\n\nPosted by: " + un + "\n\nFollow for more\n\n#instagram #reddit"
         #-------------------------------------------------------------------
         try:
 
