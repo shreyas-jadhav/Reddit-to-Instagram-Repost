@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Preferences-------------------------------------------------------------------------
 chromedriver_path = "chromedriver.exe"
-workspace_path = ''
+workspace_path = '' # User /  forword slashed and do not end with a slash
 subreddit = 'r/whatever/top'  # Enter your desired subreddit here
 numberOfPosts = 500 #Amount to posts to download 
 upload_to_instagram = True
