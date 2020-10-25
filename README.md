@@ -14,7 +14,7 @@ Please provide the following configuration settings:
 
 chromedriver_path = "chromedriver.exe"  #Provide the path for your chromedriver exe
 
-workspace_path = "whatever\file\path\images "  #Provide path to an empty folder to use as workspace, it should not end with '\'
+workspace_path = "whatever/file\pat/\images "  #Provide path to an empty folder to use as workspace, it should not end with '/'
 
 
 subreddit = 'r/SaimanSays/top'  # Enter your desired subreddit here
