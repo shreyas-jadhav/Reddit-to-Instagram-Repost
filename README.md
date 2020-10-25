@@ -2,13 +2,13 @@
 
 Hi, I am a new developer and this is my first repositary on github
 I have tried to avoid as many as possible problems, Hope you like it!
-
+_________________________________________________________________________
 This script will do the following
 1. Download images from a given subreddit
 2. Store Title, Username and downloaded image path in a JSON file
 3. Upload each of possible photo to instagram simultaneosly (optional)
    Default caption format - title + Posted by- username + Hashtags
-
+_________________________________________________________________________
 
 Please provide the following configuration settings:
 
@@ -26,3 +26,10 @@ upload_to_instagram = True
 instagram_username = 'username' 
 
 password = 'password'
+_________________________________________________________________________
+
+Please do the following before running:
+   pip install selenium
+   pip install instabot
+
+then Run main.py
