@@ -15,7 +15,8 @@ class redditPost:
     comment = "/div/div/div[2]/div[4]/div[2]/a/span"
     heading = '/div/div/div[2]/div[2]/div[1]/a/div/h3'
     username = "/div/div/div[2]/div[1]/div/div[1]/div/a"
-    workspace = './'
+    workspace = os.getcwd() + "\images"
+
 
     def __init__(self, driver, position):
         redditPost.driver = driver
@@ -67,7 +68,7 @@ class redditPost:
         clean_title = " ".join(re.split("[^a-zA-Z]*", title))
         clean_title = clean_title.replace(" ", "")
 
-        self.file_path = self.workspace+'/%s.png' % (clean_title)
+        self.file_path = self.workspace+'\%s.png' % (clean_title)
 
         try:
             print('     Downloading...')

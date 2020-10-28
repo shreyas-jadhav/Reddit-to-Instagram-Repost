@@ -3,37 +3,44 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from redditPost import *
 from igUpload import *
-
-
+import os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 # Preferences-------------------------------------------------------------------------
-chromedriver_path = "chromedriver.exe"
-workspace_path = '' # User /  forword slashed and do not end with a slash
-subreddit = 'r/whatever/top'  # Enter your desired subreddit here
-numberOfPosts = 500 #Amount to posts to download 
+
+subreddit = 'r/Davie504/top'  # Enter your desired subreddit here
+numberOfPosts = 500  # Amount to posts to download
 upload_to_instagram = True
-instagram_username = ''
-password = ''
+instagram_username = 'r.davie504'
+password = 'shreyas@4'
+
 # ------------------------------------------------------------------------------------
+
+
+cwd = os.getcwd()
+if not os.path.isdir(cwd + "/images"):
+    print("Making new folder to store images..")
+    os.makedirs(cwd + "/images")
+    print("Images will be stored in: ", cwd + "/images")
+
 ig.username = instagram_username
 ig.password = password
-ig.workspace = workspace_path
 
 if upload_to_instagram:
     inst = ig(instagram_username, password)
 
-redditPost.workspace = workspace_path
 
+cwd = os.getcwd()
+chromedriver_path = cwd + "\chromedriver.exe"
+chrome_options = webdriver.ChromeOptions()
+pref = {"profile.default_content_setting_values.notifications": 2}
+chrome_options.add_experimental_option("prefs", pref)
+chrome_options.set_headless(True)
+driver = webdriver.Chrome(options=chrome_options, executable_path=chromedriver_path)
+driver.maximize_window()
 
 try:
-    chrome_options = webdriver.ChromeOptions()
-    pref = {"profile.default_content_setting_values.notifications": 2}
-    chrome_options.add_experimental_option("prefs", pref)
-    chrome_options.set_headless(True)
-    driver = webdriver.Chrome(options=chrome_options, executable_path=chromedriver_path)
-    driver.maximize_window()
 
     print("Navigating : " + subreddit)
     driver.get("https://www.reddit.com/" + subreddit)
@@ -69,7 +76,8 @@ try:
             except Exception as e:
                 print("An error occurred! ", e)
         else:
-            driver.execute_script("window.history.go(-1)")
+            driver.back()
+            i = i-1
 
 except Exception as e:
     print('Script failed: ', e)
