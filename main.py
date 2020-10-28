@@ -12,8 +12,8 @@ from selenium.webdriver.support import expected_conditions as EC
 subreddit = 'r/Davie504/top'  # Enter your desired subreddit here
 numberOfPosts = 500  # Amount to posts to download
 upload_to_instagram = True
-instagram_username = 'r.davie504'
-password = 'shreyas@4'
+instagram_username = ' '
+password = ' '
 
 # ------------------------------------------------------------------------------------
 
