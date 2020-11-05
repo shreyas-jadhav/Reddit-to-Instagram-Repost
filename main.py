@@ -9,11 +9,13 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Preferences-------------------------------------------------------------------------
 
-subreddit = 'r/Davie504/top'  # Enter your desired subreddit here
-numberOfPosts = 500  # Amount to posts to download
+subreddit = 'r/SaimanSays/top'  # Enter your desired subreddit here
+numberOfPosts = 20  # Amount to posts to download
 upload_to_instagram = True
-instagram_username = ' '
-password = ' '
+instagram_username = 'r.saimansays'
+password = 'shreyas4'
+watermark = True
+watermark_text = "r/SaimanSays"
 
 # ------------------------------------------------------------------------------------
 
@@ -24,11 +26,9 @@ if not os.path.isdir(cwd + "/images"):
     os.makedirs(cwd + "/images")
     print("Images will be stored in: ", cwd + "/images")
 
-ig.username = instagram_username
-ig.password = password
 
 if upload_to_instagram:
-    inst = ig(instagram_username, password)
+    inst = ig(instagram_username, password, watermark_text, watermark)
 
 
 cwd = os.getcwd()
