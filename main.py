@@ -9,13 +9,13 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Preferences-------------------------------------------------------------------------
 
-subreddit = 'r/SaimanSays/top'  # Enter your desired subreddit here
+subreddit = ' '  # Enter your desired subreddit here
 numberOfPosts = 20  # Amount to posts to download
 upload_to_instagram = True
-instagram_username = 'r.saimansays'
-password = 'shreyas4'
+instagram_username = ' '
+password = ' '
 watermark = True
-watermark_text = "r/SaimanSays"
+watermark_text = " "
 
 # ------------------------------------------------------------------------------------
 
