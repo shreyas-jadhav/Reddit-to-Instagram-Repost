@@ -43,12 +43,19 @@ class redditPost:
     def isImage(self):
         xpath = '//*[@class="rpBJOHq2PR60pnwJlUyP0"]/div[' + str(self.i) + ']'
         try:
+         
             self.driver.find_element_by_xpath(xpath + self.img)
+            
         except NoSuchElementException:
             return False
         return True
 
     def isValid(self):
+        xpath = '//*[@class="rpBJOHq2PR60pnwJlUyP0"]/div[' + str(self.i) + ']'
+        element = self.driver.find_element_by_xpath(xpath)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
+        time.sleep(10)
+        
         if self.isPromoted() :
             print(">Post is promoted")
             return False
@@ -68,7 +75,7 @@ class redditPost:
         clean_title = " ".join(re.split("[^a-zA-Z]*", title))
         clean_title = clean_title.replace(" ", "")
 
-        self.file_path = self.workspace+'\%s.png' % (clean_title)
+        self.file_path = self.workspace+'\%s.jpg' % (clean_title)
 
         try:
             print('     Downloading...')
