@@ -19,7 +19,7 @@ class ig:
 
     def upload(self, title, photo, un):
         # Customize your caption here----------------------------------------
-        content = str(title) + "\n\nPosted by: " + un + "\n\nFollow: @"+str(self.username) + " for more \n\n#davie504 #davie504bass #davie504memes #bassmemes #musicmemes #bassist #guitarmemes #bassistmemes"
+        content = str(title) + "\n\nPosted by: " + un + "\n\nFollow: @"+str(self.username) + " for more \n"
         # -------------------------------------------------------------------
         try:
             self.prepare_and_fix_photo(photo=photo)
