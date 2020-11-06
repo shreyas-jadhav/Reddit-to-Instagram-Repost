@@ -8,6 +8,10 @@ This script will do the following
 2. Store Title, Username and downloaded image path in a JSON file
 3. Upload each of possible photo to instagram simultaneosly (optional)
    Default caption format - title + Posted by- username + Hashtags
+   
+   Updates and Fixes:
+   * Added watermark support.
+   * Resizes image automatically to fit ratio.
 _________________________________________________________________________
 
 Please provide the following configuration settings:
