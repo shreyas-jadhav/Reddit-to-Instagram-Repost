@@ -1,12 +1,10 @@
 # Reddit-to-Instagram-Repost
 
-Hi, I am a new developer and this is my first repositary on github
-I have tried to avoid as many as possible problems, Hope you like it!
-_________________________________________________________________________
-This script will do the following
+This script will do the following:
 1. Download images from a given subreddit
 2. Store Title, Username and downloaded image path in a JSON file
-3. Upload each of possible photo to instagram simultaneosly (optional)
+4. Process Images to fit expected Ratio and Add Borders + Watermark
+3. Upload each of images to instagram simultaneosly
    Default caption format - title + Posted by- username + Hashtags
    
    Updates and Fixes:
