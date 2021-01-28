@@ -12,8 +12,9 @@
    * Resizes image automatically to fit ratio.
 _________________________________________________________________________
 
-Please provide the following configuration settings:
+# Please provide the following configuration settings:
 
+```python
 chromedriver_path = "chromedriver.exe"  #Provide the path for your chromedriver exe
 
 workspace_path = "whatever/file\pat/\images "  #Provide path to an empty folder to use as workspace, it should not end with '/'
@@ -21,17 +22,19 @@ workspace_path = "whatever/file\pat/\images "  #Provide path to an empty folder 
 
 subreddit = 'r/SaimanSays/top'  # Enter your desired subreddit here
 
-numberOfPosts = 500 #Amount to posts to download (Note: Not all the images may be uploaded to Instagram due to unsupported ratio - Success rate is 70% )
+numberOfPosts = 500 #Amount to posts to download 
 
 upload_to_instagram = True
 
 instagram_username = 'username' 
 
 password = 'password'
+```
 _________________________________________________________________________
 
-Please do the following before running:
+## Required Packages
+   ```python
    pip install selenium
    pip install instabot
+  ```
 
-then Run main.py
