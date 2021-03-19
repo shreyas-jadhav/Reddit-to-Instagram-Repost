@@ -12,7 +12,7 @@
    * Resizes image automatically to fit ratio.
 _________________________________________________________________________
 
-## Please provide the following configuration settings in main.py:
+## Configuration:
 
 ```python
 chromedriver_path = "chromedriver.exe"  #Provide the path for your chromedriver exe
